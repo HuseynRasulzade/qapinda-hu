@@ -1,0 +1,9 @@
+---
+interface Props { kicker: string; title: string; lead?: string }
+const { kicker, title, lead } = Astro.props;
+---
+<section class="page-hero">
+  <p class="eyebrow" data-reveal>{kicker}</p>
+  <h1 data-split>{title}</h1>
+  {lead && <p class="lead" data-reveal>{lead}</p>}
+</section>

@@ -1,0 +1,7 @@
+---
+import { allRoutes } from '../i18n';
+import Page from '../views/Page.astro';
+export function getStaticPaths() { return allRoutes(); }
+const { key, lang } = Astro.props;
+---
+<Page pageKey={key} lang={lang} />

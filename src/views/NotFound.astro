@@ -1,0 +1,13 @@
+---
+import { path, t, type Lang } from '../i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const n = t(lang).notfound;
+---
+<section class="nf">
+  <p class="nf-code" aria-hidden="true"><span>4</span><span class="nf-door"><i></i></span><span>4</span></p>
+  <h1 data-split>{n.title}</h1>
+  <p class="lead" data-reveal>{n.text}</p>
+  <p class="muted" data-reveal>{n.hint}</p>
+  <a class="btn" href={path('home', lang)} data-reveal data-magnetic>{t(lang).common.backHome}</a>
+</section>

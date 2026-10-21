@@ -1,0 +1,22 @@
+---
+/** Chooses the view for a page key and wraps it in the shared layout. */
+import Base from '../layouts/Base.astro';
+import Home from './Home.astro';
+import About from './About.astro';
+import How from './How.astro';
+import Services from './Services.astro';
+import Pros from './Pros.astro';
+import Reviews from './Reviews.astro';
+import Faq from './Faq.astro';
+import Contact from './Contact.astro';
+import Legal from './Legal.astro';
+import NotFound from './NotFound.astro';
+import type { Lang, PageKey } from '../i18n';
+interface Props { pageKey: PageKey; lang: Lang }
+const { pageKey, lang } = Astro.props;
+const views: Record<PageKey, any> = { home: Home, about: About, how: How, services: Services, pros: Pros, reviews: Reviews, faq: Faq, contact: Contact, privacy: Legal, terms: Legal, notfound: NotFound };
+const View = views[pageKey];
+---
+<Base pageKey={pageKey} lang={lang}>
+  <View lang={lang} pageKey={pageKey} />
+</Base>

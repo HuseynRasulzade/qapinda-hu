@@ -1,0 +1,266 @@
+{
+  "brand": "Qapinda",
+  "meta": {
+    "siteName": "Qapinda",
+    "ogLocale": "en_GB",
+    "pages": {
+      "home": { "title": "Qapinda – The right expert, right at your door", "desc": "Tell us what you need, get offers from verified local pros and choose with confidence. Qapinda is free for customers." },
+      "about": { "title": "About – Qapinda", "desc": "Qapinda's story, mission and values: trusted professionals and a little more peace of mind." },
+      "how": { "title": "How it works – Qapinda", "desc": "Three simple steps: post a request, receive offers, compare and choose." },
+      "services": { "title": "Services – Qapinda", "desc": "Electricians, plumbers, cleaning, renovation, moving and more. Find the right professional." },
+      "pros": { "title": "For professionals – Qapinda", "desc": "Join Qapinda: new job leads every day, a reputation built on reviews and a growing business." },
+      "reviews": { "title": "Reviews – Qapinda", "desc": "Real customers rating real professionals." },
+      "faq": { "title": "FAQ – Qapinda", "desc": "Frequently asked questions about using Qapinda." },
+      "contact": { "title": "Contact – Qapinda", "desc": "Write to us with a question, an idea or a partnership proposal." },
+      "privacy": { "title": "Privacy Policy – Qapinda", "desc": "How we handle your personal data at Qapinda." },
+      "terms": { "title": "Terms & Conditions – Qapinda", "desc": "General terms and conditions for using Qapinda." },
+      "notfound": { "title": "404 – The door is shut | Qapinda", "desc": "This page could not be found." }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "how": "How it works",
+    "services": "Services",
+    "pros": "For pros",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Notify me at launch",
+    "primary": "Main menu",
+    "footer": "Footer menu",
+    "legal": "Legal"
+  },
+  "common": {
+    "skip": "Skip to content",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "langLabel": "Language",
+    "langSwitchTo": "Switch to Hungarian",
+    "soundOn": "Sound on",
+    "soundOff": "Sound off",
+    "soundLabel": "Toggle sound",
+    "skipIntro": "Skip intro",
+    "loading": "Loading",
+    "scroll": "Scroll",
+    "learnMore": "Learn more",
+    "explore": "Explore",
+    "backHome": "Back to home",
+    "sample": "Sample content",
+    "pageLoaded": "Page loaded:",
+    "rights": "All rights reserved.",
+    "tagline": "The right expert, right at your door.",
+    "footerLead": "Trusted local pros, a little more peace of mind.",
+    "madeIn": "Made with care in Budapest.",
+    "cities": "Budapest and surroundings"
+  },
+  "cookie": {
+    "title": "Cookie settings",
+    "text": "We use essential cookies to run the site. With your consent we also use anonymous analytics cookies to improve Qapinda.",
+    "accept": "Accept",
+    "decline": "Essential only",
+    "more": "Privacy policy"
+  },
+  "form": {
+    "name": "Your name",
+    "email": "Your email",
+    "topic": "Topic",
+    "message": "Your message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "consent": "I accept the privacy policy and consent to my data being processed.",
+    "topics": { "customer": "I'm a customer", "pro": "I'd like to join as a pro", "press": "Press / partnerships", "other": "Other" },
+    "errors": {
+      "required": "This field is required.",
+      "email": "Please enter a valid email address.",
+      "short": "Your message should be at least 10 characters.",
+      "consent": "You need to accept the privacy policy to send.",
+      "server": "Something went wrong while sending. Please try again later.",
+      "network": "No connection. Check your internet and try again."
+    },
+    "success": { "title": "Thank you!", "text": "We got your message and will reply soon.", "again": "New message" },
+    "wait": { "placeholder": "Your email", "button": "Notify me", "note": "Free. We only write about the launch, no spam.", "label": "Email address for launch notification", "successTitle": "You're on the list!", "successText": "We'll let you know the moment the door opens." }
+  },
+  "steps": {
+    "title": "Three simple steps to a finished job",
+    "kicker": "How it works",
+    "items": [
+      { "n": "01", "t": "Describe your job", "d": "Tell us what you need, your city and your budget. Takes under a minute." },
+      { "n": "02", "t": "Get offers from pros", "d": "Verified professionals in your category respond with price and availability." },
+      { "n": "03", "t": "Compare and choose", "d": "Check ratings and reviews, pick your favourite offer, and get it done." }
+    ]
+  },
+  "categories": {
+    "items": [
+      { "k": "electric", "n": "Electrician", "d": "Wiring, fixtures and electrical repairs" },
+      { "k": "plumber", "n": "Plumber", "d": "Pipes, leaks and plumbing installs" },
+      { "k": "reno", "n": "Renovation & construction", "d": "Home and office renovation" },
+      { "k": "clean", "n": "Cleaning", "d": "Home and office cleaning" },
+      { "k": "move", "n": "Moving service", "d": "Home and office moving" },
+      { "k": "paint", "n": "Painter", "d": "Wall and ceiling painting" },
+      { "k": "furn", "n": "Furniture assembly", "d": "Assembly and furniture repair" },
+      { "k": "ac", "n": "AC service", "d": "Installation, cleaning, refrigerant refills" },
+      { "k": "garden", "n": "Gardening & yard", "d": "Garden design and upkeep" },
+      { "k": "beauty", "n": "Beauty specialist", "d": "Hair, nails and make-up at home" },
+      { "k": "tutor", "n": "Tutor", "d": "Private lessons and tutoring" },
+      { "k": "it", "n": "Computer & IT help", "d": "Troubleshooting, setup, networks" },
+      { "k": "auto", "n": "Auto mechanic", "d": "Repairs and maintenance" },
+      { "k": "photo", "n": "Photo & video", "d": "Events and portraits" },
+      { "k": "event", "n": "Event planning", "d": "From birthdays to corporate events" }
+    ]
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Good service. A little more peace of mind.",
+      "l1": "The right expert,",
+      "l2": "right at your door.",
+      "lead": "Find the right professional for your home and everyday life. Tell us what you need, compare offers, and choose with confidence.",
+      "launch": "Launching soon in Hungary, starting with Budapest.",
+      "popular": "Popular:",
+      "chips": ["Cleaning", "Renovation", "Moving"]
+    },
+    "trust": ["Free to post", "Always your choice", "Verified professionals"],
+    "catTitle": "The right person for every job.",
+    "catLead": "From home repairs to beauty services, find the right pro for the job.",
+    "catCta": "All services",
+    "story": {
+      "kicker": "One door, many options",
+      "title": "More time for life. Leave the work to an expert.",
+      "text": "Qapinda starts where \"someone please come and fix this\" ends. No calling around, no hours of browsing: a short description is enough, and the pros take it from there."
+    },
+    "proTitle": "Good people. Great at what they do.",
+    "proLead": "Real professionals, rated by real customers.",
+    "proCta": "Find a professional",
+    "forPros": { "kicker": "For service professionals", "title": "Let your skills reach more people.", "text": "Join Qapinda to receive new job leads in your category every day, build your reputation with reviews and grow your business.", "cta": "Start getting leads" },
+    "faqTitle": "Good to know",
+    "faqCta": "View all questions"
+  },
+  "samplePros": [
+    { "i": "SE", "n": "Sample Electrician", "c": "Budapest", "r": "5.0", "d": "9 years wiring and repairing electrical systems for homes and offices. Safety and tidy work always come first.", "m": "9 yrs experience · 2 jobs completed" },
+    { "i": "SC", "n": "Sample Cleaning Crew", "c": "Budapest", "r": "5.0", "d": "Professional cleaning crew for homes and offices. We use eco-friendly products.", "m": "5 yrs experience · 1 job completed" },
+    { "i": "SA", "n": "Sample AC Service", "c": "Budapest", "r": "5.0", "d": "AC installation, cleaning and refrigerant refills.", "m": "8 yrs experience · 1 job completed" }
+  ],
+  "about": {
+    "hero": { "kicker": "About", "title": "The door is open. Trusted hands inside.", "lead": "Qapinda is where a job and the right professional find each other quickly and transparently." },
+    "story": { "title": "Our story", "text": ["We all know the feeling: something breaks at home and it takes days to find someone reliable, available and fairly priced.", "Qapinda simplifies that: you describe the job, professionals send offers, and you decide calmly based on ratings.", "We build on the experience of our platform already running in Azerbaijan, and bring it to Hungary, tailored to local needs."] },
+    "mission": { "title": "Our mission", "text": "To make finding a trusted professional a two-minute task, not a worry, for both sides: the one who hires and the one who works." },
+    "values": {
+      "title": "What we care about",
+      "items": [
+        { "t": "Transparency", "d": "Prices, ratings, terms: everything is where you expect to see it." },
+        { "t": "Trust", "d": "Verified profiles and real reviews, because trust is earned, not advertised." },
+        { "t": "Respect", "d": "We value the customer's time and the professional's craft." },
+        { "t": "Simplicity", "d": "What looks hard, we make easy." }
+      ]
+    },
+    "timeline": {
+      "title": "Our journey",
+      "items": [
+        { "y": "The idea", "t": "One simple question", "d": "Why is it so hard to find a good professional?" },
+        { "y": "The first door", "t": "The Azerbaijani platform launches", "d": "Real pros, real reviews, real jobs done." },
+        { "y": "Learning", "t": "We refine how it works", "d": "We simplify and improve based on feedback." },
+        { "y": "Hungary", "t": "Qapinda.hu opens", "d": "We start in Budapest, then expand across the country." }
+      ]
+    }
+  },
+  "how": {
+    "hero": { "kicker": "How it works", "title": "Three steps. One finished job.", "lead": "From request to result: simple and with no strings attached." },
+    "customers": "For customers",
+    "pros": "For professionals",
+    "proSteps": [
+      { "n": "01", "t": "Create your profile", "d": "Introduce yourself and add your categories, experience and service area." },
+      { "n": "02", "t": "Receive job leads", "d": "Get notified instantly about new jobs in your category." },
+      { "n": "03", "t": "Build your reputation", "d": "Every completed job brings a review, and good reviews bring more work." }
+    ],
+    "cta": "Notify me at launch"
+  },
+  "services": {
+    "hero": { "kicker": "Services", "title": "The right person for every job.", "lead": "Pick a category and find the right professional." },
+    "missing": "Can't find the service you need?",
+    "missingCta": "Tell us about your project",
+    "soon": "Coming soon"
+  },
+  "pros": {
+    "hero": { "kicker": "For professionals", "title": "Let your skills reach more people.", "lead": "On Qapinda you receive new job leads in your category and build your reputation with reviews." },
+    "benefits": {
+      "title": "Why join?",
+      "items": [
+        { "t": "New jobs every day", "d": "Tasks that match your category come straight to you." },
+        { "t": "A reputation that shows", "d": "Your reviews stay on your profile and grow stronger with every job." },
+        { "t": "You set the price", "d": "You decide what to bid on and for how much." },
+        { "t": "No strings attached", "d": "Work when you want, in the areas you want." }
+      ]
+    },
+    "cta": { "title": "Be among the first in Budapest.", "text": "Leave your email and we'll tell you as soon as professional registration opens." },
+    "note": "Pricing for professionals will be published before launch."
+  },
+  "reviews": {
+    "hero": { "kicker": "Reviews", "title": "Real people. Real opinions.", "lead": "Once we launch, customer reviews will appear here." },
+    "notice": "The reviews below are illustrations. There are no real reviews before launch.",
+    "items": [
+      { "n": "Sample Customer", "c": "Budapest", "s": 5, "q": "I posted my request in minutes and had three offers the same day. Simple and transparent." },
+      { "n": "Sample Customer", "c": "Budapest", "s": 5, "q": "I chose a pro based on the reviews. They arrived on time and did a lovely job." },
+      { "n": "Sample Customer", "c": "Budapest", "s": 5, "q": "No more calling around friends. The move went off without a hitch." },
+      { "n": "Sample Professional", "c": "Budapest", "s": 5, "q": "I get new jobs regularly, and good reviews really do bring more work." }
+    ]
+  },
+  "faq": {
+    "hero": { "kicker": "FAQ", "title": "Good to know.", "lead": "A few answers to help you get started." },
+    "items": [
+      { "q": "How does Qapinda work?", "a": "You describe what you need, verified professionals in that category send offers, and you pick the best one based on price and ratings." },
+      { "q": "Does it cost anything to post a request?", "a": "No. Posting a request and viewing offers is free for customers, and the choice is always yours." },
+      { "q": "How do I choose the right professional?", "a": "Compare offer prices, availability, experience and past customers' reviews. If you have questions, the pro can get in touch." },
+      { "q": "Can I offer my own services?", "a": "Yes! You can sign up as a professional, choose your categories and receive job leads. We'll let you know when registration opens." },
+      { "q": "When does Qapinda launch in Hungary?", "a": "Soon, starting in Budapest. Leave your email and we'll tell you the moment the door opens." },
+      { "q": "How do you handle my data?", "a": "We only process the data we need, in line with GDPR. Details are in our privacy policy." }
+    ],
+    "more": { "title": "Didn't find your answer?", "cta": "Write to us" }
+  },
+  "contact": {
+    "hero": { "kicker": "Contact", "title": "Knock. We'll open the door.", "lead": "Got a question, an idea or a partnership in mind? Write to us and we'll reply soon." },
+    "info": {
+      "title": "Get in touch",
+      "email": "Email",
+      "emailValue": "hello@qapinda.hu",
+      "address": "Address",
+      "addressValue": "[ADDRESS – to be filled in], Budapest, Hungary",
+      "hours": "Support hours",
+      "hoursValue": "Mon–Fri 9:00–17:00",
+      "social": "Social media"
+    },
+    "mapLabel": "Budapest"
+  },
+  "notfound": {
+    "title": "Oops, this door is shut.",
+    "text": "The page you're looking for can't be found. Maybe it moved out, or never lived here.",
+    "hint": "Try the handle, or just move your mouse."
+  },
+  "legal": {
+    "updated": "Last updated: 21 October 2026",
+    "toc": "Contents",
+    "placeholderNote": "Note: this text is a template. Have it reviewed by a lawyer before launch and fill in the [BRACKETED] details.",
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        { "h": "1. Data controller", "p": ["The data controller is [COMPANY NAME], [ADDRESS], tax number: [TAX NUMBER], email: hello@qapinda.hu."] },
+        { "h": "2. What data we process", "p": ["Contact form: name, email address, message content.", "Launch notification list: email address.", "Analytics data: only with your consent, in anonymised form."] },
+        { "h": "3. Purpose and legal basis", "p": ["We use contact and notification data to answer your enquiry and to inform you about the launch. Legal basis: your consent (GDPR Art. 6(1)(a)).", "Analytics is also based on your consent."] },
+        { "h": "4. Retention", "p": ["We keep data until the purpose is fulfilled, but at most until you withdraw consent or 2 years after the last contact."] },
+        { "h": "5. Cookies", "p": ["Essential cookies and storage (e.g. language and consent settings) are always used. Analytics cookies load only after you consent. You can change your decision at any time by clearing your browser data."] },
+        { "h": "6. Your rights", "p": ["You may request access, rectification, erasure, restriction, object to processing and request data portability. You can lodge a complaint with the Hungarian National Authority for Data Protection and Freedom of Information (NAIH, naih.hu)."] },
+        { "h": "7. Contact", "p": ["For privacy questions write to hello@qapinda.hu."] }
+      ]
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "sections": [
+        { "h": "1. The service", "p": ["Qapinda is an intermediary platform that connects customers with independent professionals. The work is carried out by the professional under an agreement between the customer and the professional."] },
+        { "h": "2. Provider details", "p": ["[COMPANY NAME], [ADDRESS], company reg. no.: [REG NUMBER], tax number: [TAX NUMBER], email: hello@qapinda.hu."] },
+        { "h": "3. Use", "p": ["The platform is free for customers. Users must provide accurate information and use the site lawfully."] },
+        { "h": "4. Liability", "p": ["Qapinda strives to verify professionals but is not liable for the performance of the contract between professional and customer, except where the law requires otherwise."] },
+        { "h": "5. Intellectual property", "p": ["The site's content, branding and source code belong to Qapinda and may be used only with prior written permission."] },
+        { "h": "6. Changes and governing law", "p": ["We may amend these terms unilaterally; changes take effect when published on the site. The relationship is governed by Hungarian law."] }
+      ]
+    }
+  }
+}

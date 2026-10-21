@@ -1,0 +1,48 @@
+---
+import { path, t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const f = d.form;
+const c = d.contact.info;
+---
+<PageHero {...d.contact.hero} />
+<section class="section contact-grid">
+  <form class="card-form" data-form="contact" novalidate method="post" action="/contact.php" data-lang={lang}
+    data-err-required={f.errors.required} data-err-email={f.errors.email} data-err-short={f.errors.short} data-err-consent={f.errors.consent} data-err-server={f.errors.server} data-err-network={f.errors.network}
+    data-sending={f.sending}>
+    <div class="field"><label for="c-name">{f.name}</label><input id="c-name" name="name" type="text" autocomplete="name" required /><p class="field-error" role="alert"></p></div>
+    <div class="field"><label for="c-email">{f.email}</label><input id="c-email" name="email" type="email" autocomplete="email" required /><p class="field-error" role="alert"></p></div>
+    <div class="field"><label for="c-topic">{f.topic}</label>
+      <select id="c-topic" name="topic">
+        {Object.entries(f.topics).map(([k, v]) => <option value={k}>{v}</option>)}
+      </select></div>
+    <div class="field"><label for="c-msg">{f.message}</label><textarea id="c-msg" name="message" rows="5" required minlength="10"></textarea><p class="field-error" role="alert"></p></div>
+    <div class="field check"><input id="c-consent" name="consent" type="checkbox" value="1" required /><label for="c-consent">{f.consent} <a href={path('privacy', lang)}>→</a></label><p class="field-error" role="alert"></p></div>
+    <input type="hidden" name="type" value="contact" />
+    <input type="hidden" name="lang" value={lang} />
+    <input type="hidden" name="ts" value="" data-ts />
+    <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+    <p class="field-error form-error" role="alert" data-form-error></p>
+    <button class="btn" type="submit" data-magnetic><span>{f.send}</span></button>
+    <div class="form-success" hidden tabindex="-1">
+      <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" /><path d="M14 27l8 8 16-17" /></svg>
+      <div><strong>{f.success.title}</strong><p>{f.success.text}</p><button type="button" class="btn btn-sm btn-ghost" data-again>{f.success.again}</button></div>
+    </div>
+  </form>
+  <aside class="info-card" data-reveal>
+    <h2 class="h3">{c.title}</h2>
+    <dl>
+      <dt>{c.email}</dt><dd><a href={`mailto:${c.emailValue}`}>{c.emailValue}</a></dd>
+      <dt>{c.address}</dt><dd>{c.addressValue}</dd>
+      <dt>{c.hours}</dt><dd>{c.hoursValue}</dd>
+      <dt>{c.social}</dt>
+      <dd class="social"><a href="https://facebook.com/qapinda" rel="noopener" target="_blank">Facebook</a> <a href="https://instagram.com/qapinda" rel="noopener" target="_blank">Instagram</a> <a href="https://linkedin.com/company/qapinda" rel="noopener" target="_blank">LinkedIn</a></dd>
+    </dl>
+    <div class="map" role="img" aria-label={d.contact.mapLabel}>
+      <svg viewBox="0 0 300 160" aria-hidden="true"><path d="M0 100 C60 70 90 120 150 95 S250 60 300 90" /><path d="M120 0 C130 50 160 90 140 160" /><path d="M0 40 L300 30" /><circle cx="148" cy="88" r="7" class="pin" /><circle cx="148" cy="88" r="16" class="pulse" /></svg>
+      <span>{d.contact.mapLabel}</span>
+    </div>
+  </aside>
+</section>

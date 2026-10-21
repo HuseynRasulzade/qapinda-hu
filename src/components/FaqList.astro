@@ -1,0 +1,15 @@
+---
+import { t, type Lang } from '../i18n';
+interface Props { lang: Lang; limit?: number }
+const { lang, limit } = Astro.props;
+const items = limit ? t(lang).faq.items.slice(0, limit) : t(lang).faq.items;
+---
+<div class="faq" data-stagger data-faq>
+  {items.map((it, i) => (
+    <div class="faq-item">
+      <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls={`fa-${limit ?? 'all'}-${i}`} id={`fq-${limit ?? 'all'}-${i}`}>
+        <span>{it.q}</span><i aria-hidden="true"></i></button></h3>
+      <div class="faq-a" id={`fa-${limit ?? 'all'}-${i}`} role="region" aria-labelledby={`fq-${limit ?? 'all'}-${i}`} hidden><p>{it.a}</p></div>
+    </div>
+  ))}
+</div>

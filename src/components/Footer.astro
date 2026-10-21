@@ -1,0 +1,36 @@
+---
+import { path, t, type Lang, type PageKey } from '../i18n';
+import Logo from './Logo.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const cols: PageKey[] = ['about', 'how', 'services', 'pros', 'reviews', 'faq', 'contact'];
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <a class="brand" href={path('home', lang)}><Logo /><span>Qapinda</span></a>
+      <p class="foot-tag" data-split>{d.common.tagline}</p>
+      <p class="muted">{d.common.footerLead}</p>
+    </div>
+    <nav aria-label={d.nav.footer}>
+      <ul class="foot-links">
+        {cols.map((k) => <li><a href={path(k, lang)}>{d.nav[k]}</a></li>)}
+      </ul>
+    </nav>
+    <div class="foot-contact">
+      <p class="eyebrow">{d.contact.info.email}</p>
+      <a href={`mailto:${d.contact.info.emailValue}`} class="foot-mail">{d.contact.info.emailValue}</a>
+      <p class="muted">{d.common.cities}</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© {year} Qapinda. {d.common.rights}</span>
+    <nav aria-label={d.nav.legal}>
+      <a href={path('privacy', lang)}>{d.legal.privacy.title}</a>
+      <a href={path('terms', lang)}>{d.legal.terms.title}</a>
+    </nav>
+    <span class="muted">{d.common.madeIn}</span>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+---
+import { PAGES, path, t, type Lang, type PageKey } from '../i18n';
+import Logo from './Logo.astro';
+interface Props { lang: Lang; pageKey: PageKey }
+const { lang, pageKey } = Astro.props;
+const d = t(lang);
+const other: Lang = lang === 'hu' ? 'en' : 'hu';
+const nav: PageKey[] = ['about', 'how', 'services', 'pros', 'reviews', 'faq', 'contact'];
+---
+<header class="site-header" data-header>
+  <a class="brand" href={path('home', lang)} aria-label={`Qapinda – ${d.nav.home}`}><Logo /><span>Qapinda</span></a>
+  <nav class="nav" aria-label={d.nav.primary} data-nav>
+    <ul>
+      {nav.map((k) => (
+        <li><a href={path(k, lang)} aria-current={pageKey === k ? 'page' : undefined} data-magnetic-soft>{d.nav[k]}</a></li>
+      ))}
+    </ul>
+  </nav>
+  <div class="header-tools">
+    <button class="sound" type="button" data-sound aria-pressed="false" aria-label={d.common.soundLabel} data-on={d.common.soundOn} data-off={d.common.soundOff}>
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span class="sound-label">{d.common.soundOff}</span>
+    </button>
+    <div class="lang" role="group" aria-label={d.common.langLabel}>
+      <a class={lang === 'hu' ? 'is-active' : ''} lang="hu" hreflang="hu-HU" data-lang="hu" href={path(pageKey, 'hu')} aria-current={lang === 'hu' ? 'true' : undefined}>HU</a>
+      <span aria-hidden="true">|</span>
+      <a class={lang === 'en' ? 'is-active' : ''} lang="en" hreflang="en" data-lang="en" href={path(pageKey, 'en')} aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
+    </div>
+    <a class="btn btn-sm hide-sm" href={path('pros', lang)} data-magnetic>{d.nav.cta}</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="nav" data-burger aria-label={d.common.menuOpen} data-open={d.common.menuOpen} data-close={d.common.menuClose}><i></i><i></i></button>
+  </div>
+</header>

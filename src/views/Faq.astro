@@ -1,0 +1,16 @@
+---
+import { path, t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+import FaqList from '../components/FaqList.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+---
+<PageHero {...d.faq.hero} />
+<section class="section narrow">
+  <FaqList lang={lang} />
+  <div class="center cta-line">
+    <p class="lead" data-reveal>{d.faq.more.title}</p>
+    <a class="btn" href={path('contact', lang)} data-reveal data-magnetic>{d.faq.more.cta}</a>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+import { path, t, type Lang } from '../i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+---
+<aside class="cookie" data-cookie hidden aria-labelledby="ck-t" role="region">
+  <h2 id="ck-t">{d.cookie.title}</h2>
+  <p>{d.cookie.text} <a href={path('privacy', lang)}>{d.cookie.more}</a></p>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-sm" data-consent="all">{d.cookie.accept}</button>
+    <button type="button" class="btn btn-sm btn-ghost" data-consent="essential">{d.cookie.decline}</button>
+  </div>
+</aside>

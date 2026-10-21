@@ -1,0 +1,30 @@
+---
+import { path, t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+import Steps from '../components/Steps.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const s = d.steps.items;
+---
+<PageHero {...d.how.hero} />
+<section class="walk" data-walk aria-label={d.how.customers}>
+  <div class="walk-sticky">
+    <p class="eyebrow">{d.how.customers}</p>
+    <div class="walk-stage">
+      {s.map((x, i) => (
+        <article class="walk-step" data-step={i}>
+          <span class="walk-n">{x.n}</span>
+          <h2>{x.t}</h2>
+          <p class="lead">{x.d}</p>
+        </article>
+      ))}
+    </div>
+    <ol class="walk-dots" aria-hidden="true">{s.map(() => <li></li>)}</ol>
+  </div>
+</section>
+<section class="section">
+  <header class="sec-head"><h2 data-split>{d.how.pros}</h2></header>
+  <Steps lang={lang} items={d.how.proSteps} />
+  <p class="center" data-reveal><a class="btn btn-accent" href={path('pros', lang)} data-magnetic>{d.how.cta}</a></p>
+</section>

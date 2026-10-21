@@ -1,0 +1,97 @@
+---
+/**
+ * Shared shell: <head> SEO + hreflang, persistent WebGL canvas, header/footer,
+ * preloader, page-transition wipe, cookie banner. Persisted elements
+ * (transition:persist) survive client-side navigation, so the 3D world never reloads.
+ */
+import { ClientRouter } from 'astro:transitions';
+import '@fontsource-variable/plus-jakarta-sans';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import { LANGS, PAGES, SCENE, SITE, abs, path, t, type Lang, type PageKey } from '../i18n';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Cookie from '../components/Cookie.astro';
+import Logo from '../components/Logo.astro';
+
+interface Props { pageKey: PageKey; lang: Lang }
+const { pageKey, lang } = Astro.props;
+const d = t(lang);
+const meta = d.meta.pages[pageKey];
+const canonical = abs(pageKey, lang);
+const isNF = pageKey === 'notfound';
+const other: Lang = lang === 'hu' ? 'en' : 'hu';
+const ogImage = SITE + '/og.svg';
+const org = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Qapinda', url: SITE, logo: SITE + '/favicon.svg', email: 'szia@qapinda.hu', areaServed: 'HU' };
+const site = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Qapinda', url: SITE, inLanguage: ['hu-HU', 'en'] };
+const faq = pageKey === 'faq' ? { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: lang, mainEntity: d.faq.items.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) } : null;
+---
+<!doctype html>
+<html lang={lang === 'hu' ? 'hu-HU' : 'en'} data-lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.desc} />
+    <meta name="theme-color" content="#0E1A12" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    {isNF ? <meta name="robots" content="noindex" /> : (
+      <>
+        {LANGS.map((l) => <link rel="alternate" hreflang={l === 'hu' ? 'hu-HU' : 'en'} href={abs(pageKey, l)} />)}
+        <link rel="alternate" hreflang="x-default" href={abs(pageKey, 'hu')} />
+      </>
+    )}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Qapinda" />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={d.meta.ogLocale} />
+    <meta property="og:locale:alternate" content={t(other).meta.ogLocale} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(org)} />
+    <script type="application/ld+json" set:html={JSON.stringify(site)} />
+    {faq && <script type="application/ld+json" set:html={JSON.stringify(faq)} />}
+    <!-- Avoid preloader flash for returning visitors in the same session -->
+    <script is:inline>
+      try { if (sessionStorage.getItem('q-intro')) document.documentElement.classList.add('intro-done'); } catch (e) {}
+      document.documentElement.classList.add('js');
+    </script>
+    <ClientRouter />
+  </head>
+  <body data-page={pageKey} data-scene={SCENE[pageKey]}>
+    <a class="skip" href="#main">{d.common.skip}</a>
+
+    <!-- Persistent 3D world (one canvas for the entire site) -->
+    <div class="gl-wrap" aria-hidden="true" transition:persist="gl">
+      <canvas id="gl"></canvas>
+      <div class="gl-fallback"></div>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true" transition:persist="cursor"><i class="cursor-dot"></i><i class="cursor-ring"></i></div>
+
+    <!-- Branded page wipe + screen-reader announcer -->
+    <div class="wipe" aria-hidden="true" transition:persist="wipe"><span class="wipe-logo"><Logo /></span></div>
+    <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true" transition:persist="announcer"></div>
+
+    <div class="preloader" role="dialog" aria-label={d.common.loading} data-preloader>
+      <div class="pre-door"><i></i><i></i></div>
+      <div class="pre-brand"><Logo /> <span>Qapinda</span></div>
+      <div class="pre-count" aria-live="off"><span data-count>0</span><small>%</small></div>
+      <button type="button" class="pre-skip" data-skip>{d.common.skipIntro} →</button>
+    </div>
+
+    <Header lang={lang} pageKey={pageKey} />
+    <main id="main" tabindex="-1" data-scene={SCENE[pageKey]}>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <Cookie lang={lang} />
+
+    <script>
+      import '../scripts/main.ts';
+    </script>
+  </body>
+</html>

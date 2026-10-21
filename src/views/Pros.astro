@@ -1,0 +1,29 @@
+---
+import { t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+import Steps from '../components/Steps.astro';
+import Waitlist from '../components/Waitlist.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const p = d.pros;
+---
+<PageHero {...p.hero} />
+<section class="section">
+  <header class="sec-head"><h2 data-split>{p.benefits.title}</h2></header>
+  <ul class="val-grid" data-stagger>
+    {p.benefits.items.map((v, i) => <li class="val" data-tilt><span class="step-n">0{i + 1}</span><h3>{v.t}</h3><p>{v.d}</p></li>)}
+  </ul>
+</section>
+<section class="section">
+  <header class="sec-head"><h2 data-split>{d.how.pros}</h2></header>
+  <Steps lang={lang} items={d.how.proSteps} />
+</section>
+<section class="section band">
+  <div class="band-inner">
+    <h2 data-split>{p.cta.title}</h2>
+    <p class="lead" data-reveal>{p.cta.text}</p>
+    <div data-reveal><Waitlist lang={lang} source="pros" /></div>
+    <p class="muted small" data-reveal>{p.note}</p>
+  </div>
+</section>

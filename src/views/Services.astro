@@ -1,0 +1,22 @@
+---
+import { path, t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+---
+<PageHero {...d.services.hero} />
+<section class="section">
+  <ul class="cat-grid big" data-stagger>
+    {d.categories.items.map((c) => (
+      <li><div class="cat-card" data-tilt>
+        <Icon k={c.k} /><h2 class="h3">{c.n}</h2><p>{c.d}</p><span class="badge">{d.services.soon}</span>
+      </div></li>
+    ))}
+  </ul>
+  <div class="center cta-line">
+    <p class="lead" data-reveal>{d.services.missing}</p>
+    <a class="btn" href={path('contact', lang)} data-reveal data-magnetic>{d.services.missingCta}</a>
+  </div>
+</section>

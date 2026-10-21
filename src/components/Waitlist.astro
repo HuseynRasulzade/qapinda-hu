@@ -1,0 +1,26 @@
+---
+import { path, t, type Lang } from '../i18n';
+interface Props { lang: Lang; source?: string }
+const { lang, source = 'waitlist' } = Astro.props;
+const d = t(lang);
+const w = d.form.wait;
+---
+<form class="waitlist" data-form="waitlist" novalidate method="post" action="/contact.php" data-lang={lang}
+  data-err-required={d.form.errors.required} data-err-email={d.form.errors.email} data-err-server={d.form.errors.server} data-err-network={d.form.errors.network}>
+  <div class="wait-row">
+    <label class="sr-only" for={`wl-${source}`}>{w.label}</label>
+    <input id={`wl-${source}`} type="email" name="email" placeholder={w.placeholder} autocomplete="email" required aria-describedby={`wl-err-${source}`} />
+    <button class="btn" type="submit" data-magnetic><span>{w.button}</span></button>
+  </div>
+  <input type="hidden" name="type" value="waitlist" />
+  <input type="hidden" name="lang" value={lang} />
+  <input type="hidden" name="source" value={source} />
+  <input type="hidden" name="ts" value="" data-ts />
+  <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+  <p class="field-error" id={`wl-err-${source}`} role="alert"></p>
+  <p class="form-note">{w.note}</p>
+  <div class="form-success" hidden tabindex="-1">
+    <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" /><path d="M14 27l8 8 16-17" /></svg>
+    <div><strong>{w.successTitle}</strong><p>{w.successText}</p></div>
+  </div>
+</form>

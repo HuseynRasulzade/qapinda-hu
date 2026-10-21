@@ -1,0 +1,266 @@
+{
+  "brand": "Qapinda",
+  "meta": {
+    "siteName": "Qapinda",
+    "ogLocale": "hu_HU",
+    "pages": {
+      "home": { "title": "Qapinda – A megfelelő szakember, közvetlenül az ajtódnál", "desc": "Írd le, mire van szükséged, kérj ajánlatokat ellenőrzött helyi szakemberektől, és válaszd ki a legjobbat. A Qapinda ingyenes az ügyfeleknek." },
+      "about": { "title": "Rólunk – Qapinda", "desc": "Ismerd meg a Qapinda történetét, küldetését és értékeit: megbízható szakemberek, nyugodtabb hétköznapok." },
+      "how": { "title": "Hogyan működik? – Qapinda", "desc": "Három egyszerű lépés: kérés feladása, ajánlatok érkezése, összehasonlítás és választás." },
+      "services": { "title": "Szolgáltatások – Qapinda", "desc": "Villanyszerelő, vízszerelő, takarítás, felújítás, költöztetés és még sok más – találd meg a megfelelő szakembert." },
+      "pros": { "title": "Szakembereknek – Qapinda", "desc": "Csatlakozz a Qapindához: napi új megrendelések, értékelésekkel épülő hírnév, növekvő vállalkozás." },
+      "reviews": { "title": "Vélemények – Qapinda", "desc": "Valódi ügyfelek értékelései valódi szakemberekről." },
+      "faq": { "title": "GYIK – Qapinda", "desc": "Gyakori kérdések és válaszok a Qapinda használatáról." },
+      "contact": { "title": "Kapcsolat – Qapinda", "desc": "Írj nekünk kérdéseddel, ötleteddel vagy együttműködési szándékoddal." },
+      "privacy": { "title": "Adatvédelmi nyilatkozat – Qapinda", "desc": "Hogyan kezeljük a személyes adataidat a Qapindán." },
+      "terms": { "title": "Általános Szerződési Feltételek – Qapinda", "desc": "A Qapinda használatának általános szerződési feltételei." },
+      "notfound": { "title": "404 – Az ajtó zárva | Qapinda", "desc": "Ez az oldal nem található." }
+    }
+  },
+  "nav": {
+    "home": "Főoldal",
+    "about": "Rólunk",
+    "how": "Hogyan működik",
+    "services": "Szolgáltatások",
+    "pros": "Szakembereknek",
+    "reviews": "Vélemények",
+    "faq": "GYIK",
+    "contact": "Kapcsolat",
+    "cta": "Értesíts az indulásról",
+    "primary": "Főmenü",
+    "footer": "Lábléc menü",
+    "legal": "Jogi információk"
+  },
+  "common": {
+    "skip": "Ugrás a tartalomhoz",
+    "menuOpen": "Menü megnyitása",
+    "menuClose": "Menü bezárása",
+    "langLabel": "Nyelv",
+    "langSwitchTo": "Váltás angol nyelvre",
+    "soundOn": "Hang be",
+    "soundOff": "Hang ki",
+    "soundLabel": "Hangok kapcsolása",
+    "skipIntro": "Intró átugrása",
+    "loading": "Betöltés",
+    "scroll": "Görgess",
+    "learnMore": "Tudj meg többet",
+    "explore": "Felfedezem",
+    "backHome": "Vissza a főoldalra",
+    "sample": "Minta tartalom",
+    "pageLoaded": "Betöltődött oldal:",
+    "rights": "Minden jog fenntartva.",
+    "tagline": "A megfelelő szakember, közvetlenül az ajtódnál.",
+    "footerLead": "Megbízható helyi szakemberek, kicsit több nyugalom.",
+    "madeIn": "Budapesten készül, szeretettel.",
+    "cities": "Budapest és környéke"
+  },
+  "cookie": {
+    "title": "Süti beállítások",
+    "text": "Alapvető sütiket használunk az oldal működéséhez. Hozzájárulásoddal névtelen statisztikai sütiket is, hogy jobbá tehessük a Qapindát.",
+    "accept": "Elfogadom",
+    "decline": "Csak a szükségesek",
+    "more": "Adatvédelmi nyilatkozat"
+  },
+  "form": {
+    "name": "Neved",
+    "email": "E-mail-címed",
+    "topic": "Téma",
+    "message": "Üzeneted",
+    "send": "Üzenet küldése",
+    "sending": "Küldés…",
+    "consent": "Elfogadom az adatvédelmi nyilatkozatot, és hozzájárulok az adataim kezeléséhez.",
+    "topics": { "customer": "Ügyfélként érdeklődöm", "pro": "Szakemberként csatlakoznék", "press": "Sajtó / együttműködés", "other": "Egyéb" },
+    "errors": {
+      "required": "Ez a mező kötelező.",
+      "email": "Kérjük, adj meg érvényes e-mail-címet.",
+      "short": "Az üzenet legalább 10 karakter legyen.",
+      "consent": "A küldéshez el kell fogadnod az adatvédelmi nyilatkozatot.",
+      "server": "Hiba történt a küldés közben. Kérjük, próbáld újra később.",
+      "network": "Nincs kapcsolat. Ellenőrizd az internetet, és próbáld újra."
+    },
+    "success": { "title": "Köszönjük!", "text": "Megkaptuk az üzenetedet, hamarosan válaszolunk.", "again": "Új üzenet" },
+    "wait": { "placeholder": "E-mail-címed", "button": "Értesítsetek", "note": "Ingyenes. Csak az indulásról írunk, spam nélkül.", "label": "E-mail-cím az indulási értesítéshez", "successTitle": "Rajta vagy a listán!", "successText": "Amint kinyitjuk az ajtót, szólunk." }
+  },
+  "steps": {
+    "title": "Három egyszerű lépés a kész munkáig",
+    "kicker": "Hogyan működik",
+    "items": [
+      { "n": "01", "t": "Írd le a feladatot", "d": "Told el, mire van szükséged, melyik városban, és mekkora a keret. Egy percnél kevesebb időbe telik." },
+      { "n": "02", "t": "Ajánlatok érkeznek", "d": "Az ellenőrzött szakemberek az adott kategóriában árral és szabad időponttal jelentkeznek." },
+      { "n": "03", "t": "Hasonlíts és válassz", "d": "Nézd meg az értékeléseket, válaszd ki a kedvenc ajánlatodat, és már intézik is a munkát." }
+    ]
+  },
+  "categories": {
+    "items": [
+      { "k": "electric", "n": "Villanyszerelő", "d": "Vezetékezés, lámpák, elektromos javítások" },
+      { "k": "plumber", "n": "Vízszerelő", "d": "Csövek, csöpögés, szerelvények beépítése" },
+      { "k": "reno", "n": "Felújítás és építés", "d": "Otthon és iroda teljes felújítása" },
+      { "k": "clean", "n": "Takarítás", "d": "Lakás- és irodatakarítás" },
+      { "k": "move", "n": "Költöztetés", "d": "Lakás- és irodaköltöztetés" },
+      { "k": "paint", "n": "Festő-mázoló", "d": "Fal- és mennyezetfestés" },
+      { "k": "furn", "n": "Bútorösszeszerelés", "d": "Bútorok összeszerelése és javítása" },
+      { "k": "ac", "n": "Klímaszerviz", "d": "Beszerelés, tisztítás, hűtőközeg-töltés" },
+      { "k": "garden", "n": "Kertészet", "d": "Kertrendezés és gondozás" },
+      { "k": "beauty", "n": "Szépségápolás", "d": "Fodrász, műköröm, smink – házhoz" },
+      { "k": "tutor", "n": "Korrepetálás", "d": "Magánórák és tanulássegítés" },
+      { "k": "it", "n": "Számítógép és IT", "d": "Hibaelhárítás, telepítés, hálózat" },
+      { "k": "auto", "n": "Autószerelő", "d": "Javítás és karbantartás" },
+      { "k": "photo", "n": "Fotó és videó", "d": "Eseményekre és portrékhoz" },
+      { "k": "event", "n": "Rendezvényszervezés", "d": "Szülinaptól a céges eseményig" }
+    ]
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Jó szolgáltatás. Egy kis plusz nyugalom.",
+      "l1": "A megfelelő szakember,",
+      "l2": "közvetlenül az ajtódnál.",
+      "lead": "Találd meg a megfelelő szakembert az otthonodhoz és a mindennapokhoz. Írd le, mire van szükséged, hasonlítsd össze az ajánlatokat, és válassz magabiztosan.",
+      "launch": "Hamarosan indul Magyarországon – elsőként Budapesten.",
+      "popular": "Népszerű:",
+      "chips": ["Takarítás", "Felújítás", "Költöztetés"]
+    },
+    "trust": ["Ingyenes feladás", "Mindig te döntesz", "Ellenőrzött szakemberek"],
+    "catTitle": "Minden munkához megvan az ember.",
+    "catLead": "Az otthoni javításoktól a szépségápolásig – találd meg a feladatodhoz illő szakembert.",
+    "catCta": "Összes szolgáltatás",
+    "story": {
+      "kicker": "Egy ajtó, sok lehetőség",
+      "title": "Több idő az életre. A munkát bízd szakemberre.",
+      "text": "A Qapinda ott kezdődik, ahol a „valaki jöjjön már el” véget ér. Nem kell ismerősöket hívogatni, nem kell órákig böngészni: egy rövid leírás elég, a többit a szakemberek intézik."
+    },
+    "proTitle": "Jó emberek. Kiváló munka.",
+    "proLead": "Valódi szakemberek, valódi ügyfelek értékelésével.",
+    "proCta": "Szakembert keresek",
+    "forPros": { "kicker": "Szakembereknek", "title": "Jussanak el a tudásodhoz többen.", "text": "Csatlakozz a Qapindához, és kapj naponta új megrendeléseket a kategóriádban, építsd a hírneved értékelésekkel, és fejleszd a vállalkozásod.", "cta": "Megrendelések kérése" },
+    "faqTitle": "Jó, ha tudod",
+    "faqCta": "Összes kérdés"
+  },
+  "samplePros": [
+    { "i": "MV", "n": "Minta Villanyszerelő", "c": "Budapest", "r": "5,0", "d": "9 éve szerel villamos hálózatokat otthonokban és irodákban. A biztonság és a rendes munka mindig az első.", "m": "9 év tapasztalat · 2 elvégzett munka" },
+    { "i": "MT", "n": "Minta Takarító Csapat", "c": "Budapest", "r": "5,0", "d": "Profi takarítócsapat lakásokhoz és irodákhoz. Környezetbarát szereket használunk.", "m": "5 év tapasztalat · 1 elvégzett munka" },
+    { "i": "MK", "n": "Minta Klímaszerviz", "c": "Budapest", "r": "5,0", "d": "Klímaberendezések beszerelése, tisztítása és hűtőközeg-töltése.", "m": "8 év tapasztalat · 1 elvégzett munka" }
+  ],
+  "about": {
+    "hero": { "kicker": "Rólunk", "title": "Nyitva az ajtó. Bent a megbízható kezek.", "lead": "A Qapinda egy hely, ahol a feladat és a megfelelő szakember gyorsan és átláthatóan egymásra talál." },
+    "story": { "title": "A történetünk", "text": ["Sokan ismerjük a helyzetet: elromlik valami otthon, és hirtelen napokig tart megtalálni valakit, aki megbízható, elérhető és tisztességes áron dolgozik.", "A Qapinda ezt egyszerűsíti: te leírod a feladatot, a szakemberek ajánlatot adnak, te pedig az értékelések alapján, nyugodtan döntesz.", "Azerbajdzsánban már működő platformunk tapasztalatára építünk, és most Magyarországra hozzuk el, helyi igényekre szabva."] },
+    "mission": { "title": "Küldetésünk", "text": "Hogy a megbízható szakember megtalálása ne gond, hanem két perc legyen – mindkét oldalnak: aki megbíz, és aki dolgozik." },
+    "values": {
+      "title": "Amit fontosnak tartunk",
+      "items": [
+        { "t": "Átláthatóság", "d": "Árak, értékelések, feltételek – minden ott van, ahol látnod kell." },
+        { "t": "Bizalom", "d": "Ellenőrzött profilok és valódi vélemények, mert a bizalom nem hirdethető, hanem kiérdemelt." },
+        { "t": "Tisztelet", "d": "Az ügyfél idejét és a szakember munkáját is megbecsüljük." },
+        { "t": "Egyszerűség", "d": "Ami nehéznek tűnik, azt mi könnyűvé tesszük." }
+      ]
+    },
+    "timeline": {
+      "title": "Az utunk",
+      "items": [
+        { "y": "Az ötlet", "t": "Egy egyszerű kérdés", "d": "Miért olyan nehéz jó szakembert találni?" },
+        { "y": "Az első ajtó", "t": "Elindul az azerbajdzsáni platform", "d": "Valódi szakemberek, valódi értékelések, valódi munkák." },
+        { "y": "Tanulás", "t": "Finomítjuk a működést", "d": "Visszajelzések alapján egyszerűsítünk és fejlesztünk." },
+        { "y": "Magyarország", "t": "Megnyílik a Qapinda.hu", "d": "Budapesttel kezdünk, utána bővítünk az ország többi részére." }
+      ]
+    }
+  },
+  "how": {
+    "hero": { "kicker": "Hogyan működik", "title": "Három lépés. Egy kész munka.", "lead": "A kéréstől a megoldásig – egyszerűen, kötöttségek nélkül." },
+    "customers": "Ügyfeleknek",
+    "pros": "Szakembereknek",
+    "proSteps": [
+      { "n": "01", "t": "Hozz létre profilt", "d": "Mutatkozz be, add meg a kategóriáidat, a tapasztalatod és a munkaterületed." },
+      { "n": "02", "t": "Kapj megrendeléseket", "d": "A kategóriádba tartozó új feladatokról azonnal értesülsz." },
+      { "n": "03", "t": "Építsd a hírneved", "d": "Minden elvégzett munka után kapott értékelés több megrendelést hoz." }
+    ],
+    "cta": "Értesíts az indulásról"
+  },
+  "services": {
+    "hero": { "kicker": "Szolgáltatások", "title": "Minden munkához megvan az ember.", "lead": "Válassz kategóriát, és találd meg a megfelelő szakembert." },
+    "missing": "Nem találod, amire szükséged van?",
+    "missingCta": "Mesélj a projektedről",
+    "soon": "Hamarosan"
+  },
+  "pros": {
+    "hero": { "kicker": "Szakembereknek", "title": "Jussanak el a tudásodhoz többen.", "lead": "A Qapindán új megrendeléseket kapsz a kategóriádban, és értékelésekkel építed a hírneved." },
+    "benefits": {
+      "title": "Miért érdemes csatlakozni?",
+      "items": [
+        { "t": "Napi új megrendelések", "d": "A kategóriádhoz illő feladatok közvetlenül hozzád érkeznek." },
+        { "t": "Hírnév, ami látszik", "d": "Az értékeléseid a profilodon maradnak, és minden munkával erősödnek." },
+        { "t": "Te szabod meg az árat", "d": "Te döntöd el, mire adsz ajánlatot és mennyiért." },
+        { "t": "Nincs kötöttség", "d": "Akkor dolgozol, amikor szeretnél, azokon a területeken, ahol szeretnél." }
+      ]
+    },
+    "cta": { "title": "Légy az elsők között Budapesten.", "text": "Hagyd meg az e-mail-címed, és szólunk, amint megnyílik a szakemberek regisztrációja." },
+    "note": "A szakemberek díjszabását az indulás előtt tesszük közzé."
+  },
+  "reviews": {
+    "hero": { "kicker": "Vélemények", "title": "Valódi emberek. Valódi vélemények.", "lead": "Az indulás után ide kerülnek az ügyfelek értékelései." },
+    "notice": "Az alábbi vélemények illusztrációk, az indulás előtt még nincs valós értékelés.",
+    "items": [
+      { "n": "Minta Ügyfél", "c": "Budapest", "s": 5, "q": "Percek alatt feladtam a kérést, még aznap három ajánlatot kaptam. Egyszerű és átlátható." },
+      { "n": "Minta Ügyfél", "c": "Budapest", "s": 5, "q": "Az értékelések alapján választottam szakembert, pontosan érkezett, és szépen dolgozott." },
+      { "n": "Minta Ügyfél", "c": "Budapest", "s": 5, "q": "Végre nem kellett ismerősöket hívogatnom. A költöztetés zökkenőmentes volt." },
+      { "n": "Minta Szakember", "c": "Budapest", "s": 5, "q": "Rendszeresen kapok új megrendeléseket, és a jó értékelések tényleg több munkát hoznak." }
+    ]
+  },
+  "faq": {
+    "hero": { "kicker": "GYIK", "title": "Jó, ha tudod.", "lead": "Néhány válasz, hogy könnyebben indulj." },
+    "items": [
+      { "q": "Hogyan működik a Qapinda?", "a": "Leírod, mire van szükséged, az adott kategória ellenőrzött szakemberei ajánlatot adnak, te pedig az árak és az értékelések alapján kiválasztod a számodra legjobbat." },
+      { "q": "Kerül pénzbe a kérés feladása?", "a": "Nem. Az ügyfeleknek a kérés feladása és az ajánlatok megtekintése ingyenes, és mindig te döntesz." },
+      { "q": "Hogyan válasszam ki a megfelelő szakembert?", "a": "Hasonlítsd össze az ajánlatok árát, a szabad időpontokat, a tapasztalatot és a korábbi ügyfelek értékeléseit. Ha kérdésed van, a szakember megkeresheti." },
+      { "q": "Kínálhatom a saját szolgáltatásomat?", "a": "Igen! Szakemberként regisztrálhatsz, megadhatod a kategóriáidat, és megrendeléseket kaphatsz. Az indulásról értesítünk." },
+      { "q": "Mikor indul a Qapinda Magyarországon?", "a": "Hamarosan, elsőként Budapesten. Hagyd meg az e-mail-címed, és szólunk, amint kinyitjuk az ajtót." },
+      { "q": "Hogyan kezelitek az adataimat?", "a": "Csak a szükséges adatokat kezeljük, a GDPR előírásainak megfelelően. Részletek az adatvédelmi nyilatkozatban." }
+    ],
+    "more": { "title": "Nem találtad meg a választ?", "cta": "Írj nekünk" }
+  },
+  "contact": {
+    "hero": { "kicker": "Kapcsolat", "title": "Kopogj. Mi ajtót nyitunk.", "lead": "Kérdésed, ötleted vagy együttműködési szándékod van? Írj, és hamarosan válaszolunk." },
+    "info": {
+      "title": "Elérhetőségeink",
+      "email": "E-mail",
+      "emailValue": "szia@qapinda.hu",
+      "address": "Cím",
+      "addressValue": "[CÍM – kitöltendő], Budapest, Magyarország",
+      "hours": "Ügyfélszolgálat",
+      "hoursValue": "H–P 9:00–17:00",
+      "social": "Közösségi média"
+    },
+    "mapLabel": "Budapest"
+  },
+  "notfound": {
+    "title": "Hoppá, ez az ajtó zárva.",
+    "text": "Az oldal, amit keresel, nem található. Talán elköltözött, vagy sosem volt itt.",
+    "hint": "Próbáld meg lenyomni a kilincset, vagy mozgasd az egeret."
+  },
+  "legal": {
+    "updated": "Utolsó frissítés: 2026. október 21.",
+    "toc": "Tartalom",
+    "placeholderNote": "Figyelem: ez a szöveg sablon. Az indulás előtt jogász által ellenőrizendő, a [SZÖGLETES ZÁRÓJELES] adatokat pedig ki kell tölteni.",
+    "privacy": {
+      "title": "Adatvédelmi nyilatkozat",
+      "sections": [
+        { "h": "1. Adatkezelő", "p": ["Az adatkezelő: [CÉGNÉV], [CÍM], adószám: [ADÓSZÁM], e-mail: szia@qapinda.hu."] },
+        { "h": "2. Milyen adatokat kezelünk?", "p": ["Kapcsolatfelvételi űrlap: név, e-mail-cím, az üzenet tartalma.", "Értesítési lista: e-mail-cím.", "Statisztikai adatok: csak hozzájárulásod esetén, névtelenített formában."] },
+        { "h": "3. Az adatkezelés célja és jogalapja", "p": ["A kapcsolatfelvétel és az értesítés célja a megkeresésed megválaszolása, illetve az induláskor való tájékoztatás. Jogalap: a hozzájárulásod (GDPR 6. cikk (1) a)).", "A statisztikai mérés jogalapja szintén a hozzájárulásod."] },
+        { "h": "4. Megőrzési idő", "p": ["Az adatokat a cél megvalósulásáig, de legfeljebb a hozzájárulás visszavonásáig, illetve az utolsó kapcsolatfelvételtől számított 2 évig őrizzük."] },
+        { "h": "5. Sütik", "p": ["Az oldal működéséhez szükséges sütiket (pl. nyelv- és hozzájárulás-beállítás) mindig használjuk. A statisztikai sütiket csak hozzájárulásod után töltjük be. A döntésedet bármikor módosíthatod a böngésző adatainak törlésével."] },
+        { "h": "6. Jogaid", "p": ["Kérheted az adataidhoz való hozzáférést, helyesbítést, törlést, az adatkezelés korlátozását, tiltakozhatsz, és kérheted az adathordozhatóságot. Panaszoddal fordulhatsz a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH, naih.hu)."] },
+        { "h": "7. Kapcsolat", "p": ["Adatvédelmi kérdéseiddel írj a szia@qapinda.hu címre."] }
+      ]
+    },
+    "terms": {
+      "title": "Általános Szerződési Feltételek",
+      "sections": [
+        { "h": "1. A szolgáltatás", "p": ["A Qapinda közvetítő felület, amely az ügyfeleket és a független szakembereket hozza össze. A munkát az ügyfél és a szakember közötti megállapodás alapján a szakember végzi."] },
+        { "h": "2. Szolgáltató adatai", "p": ["[CÉGNÉV], [CÍM], cégjegyzékszám: [CÉGJEGYZÉKSZÁM], adószám: [ADÓSZÁM], e-mail: szia@qapinda.hu."] },
+        { "h": "3. Használat", "p": ["A felület ügyfelek számára ingyenesen használható. A felhasználó köteles valós adatokat megadni, és jogszerűen használni az oldalt."] },
+        { "h": "4. Felelősség", "p": ["A Qapinda a szakemberek ellenőrzésére törekszik, de a szakember és az ügyfél közötti szerződés teljesítéséért nem felel, kivéve, ha jogszabály másként rendelkezik."] },
+        { "h": "5. Szellemi tulajdon", "p": ["Az oldal tartalma, arculata és forráskódja a Qapinda tulajdona, kizárólag előzetes írásbeli engedéllyel használható fel."] },
+        { "h": "6. Módosítás és irányadó jog", "p": ["A feltételeket egyoldalúan módosíthatjuk, a módosítás az oldalon való közzététellel lép hatályba. A jogviszonyra a magyar jog az irányadó."] }
+      ]
+    }
+  }
+}

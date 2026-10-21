@@ -1,0 +1,33 @@
+---
+import { t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const a = t(lang).about;
+---
+<PageHero {...a.hero} />
+<section class="section narrow">
+  <h2 data-split>{a.story.title}</h2>
+  {a.story.text.map((p) => <p class="lead" data-reveal>{p}</p>)}
+</section>
+<section class="section mission">
+  <h2 data-split>{a.mission.title}</h2>
+  <p class="big-quote" data-reveal>{a.mission.text}</p>
+</section>
+<section class="section">
+  <header class="sec-head"><h2 data-split>{a.values.title}</h2></header>
+  <ul class="val-grid" data-stagger>
+    {a.values.items.map((v, i) => (
+      <li class="val" data-tilt><span class="step-n">0{i + 1}</span><h3>{v.t}</h3><p>{v.d}</p></li>
+    ))}
+  </ul>
+</section>
+<section class="section timeline-sec" data-timeline>
+  <header class="sec-head"><h2 data-split>{a.timeline.title}</h2></header>
+  <ol class="timeline">
+    <span class="tl-line" aria-hidden="true"><i data-tl-fill></i></span>
+    {a.timeline.items.map((it) => (
+      <li class="tl-item"><span class="tl-dot" aria-hidden="true"></span><p class="eyebrow">{it.y}</p><h3>{it.t}</h3><p>{it.d}</p></li>
+    ))}
+  </ol>
+</section>

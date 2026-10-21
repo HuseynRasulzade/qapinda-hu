@@ -1,0 +1,25 @@
+---
+import { t, type Lang } from '../i18n';
+import PageHero from '../components/PageHero.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const r = d.reviews;
+---
+<PageHero {...r.hero} />
+<section class="section">
+  <p class="notice" data-reveal>{r.notice}</p>
+  <ul class="rev-grid" data-stagger>
+    {r.items.map((x) => (
+      <li class="rev" data-tilt>
+        <p class="stars" aria-label={`${x.s}/5`}>{'★'.repeat(x.s)}</p>
+        <blockquote>„{x.q}”</blockquote>
+        <footer><strong>{x.n}</strong><span class="muted"> · {x.c}</span></footer>
+        <span class="badge">{d.common.sample}</span>
+      </li>
+    ))}
+  </ul>
+</section>
+<div class="marquee" aria-hidden="true" data-marquee>
+  <div class="marquee-track"><span>Qapinda ✦ {d.common.tagline} ✦ Qapinda ✦ {d.common.tagline} ✦ </span><span>Qapinda ✦ {d.common.tagline} ✦ Qapinda ✦ {d.common.tagline} ✦ </span></div>
+</div>

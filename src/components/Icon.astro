@@ -1,0 +1,23 @@
+---
+// Minimal stroke icon set for service categories (24x24).
+interface Props { k: string }
+const { k } = Astro.props;
+const P: Record<string, string> = {
+  electric: 'M13 2 4 14h7l-1 8 9-12h-7z',
+  plumber: 'M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z',
+  reno: 'M4 20h16M6 20V9l6-5 6 5v11M10 20v-5h4v5',
+  clean: 'M12 3v4M5 8l3 2M19 8l-3 2M7 21l1-8h8l1 8zM9 13V10h6v3',
+  move: 'M3 7h11v10H3zM14 10h4l3 3v4h-7M7 19.5a1.5 1.5 0 1 0 0-.01M17 19.5a1.5 1.5 0 1 0 0-.01',
+  paint: 'M5 4h12v5H5zM17 6.5h2v5h-7V15M11 15v6',
+  furn: 'M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2',
+  ac: 'M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11',
+  garden: 'M12 21v-9M12 12c0-4 2-7 6-8 0 4-2 7-6 8zM12 15c0-3-2-5-6-5 0 3 2 5 6 5z',
+  beauty: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8z',
+  tutor: 'M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5',
+  it: 'M3 5h18v11H3zM8 20h8M12 16v4',
+  auto: 'M5 16l1.5-5.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 16M3 16h18v3H3zM7 19v1.5M17 19v1.5',
+  photo: 'M4 7h3l2-2h6l2 2h3v12H4zM12 17a3.5 3.5 0 1 0 0-.01',
+  event: 'M4 21l4-12 8 8zM14 4l1 2M18 7l2-1M19 12l2 1M11 3v2',
+};
+---
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d={P[k] ?? P.reno} /></svg>

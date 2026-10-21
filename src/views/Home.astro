@@ -1,0 +1,92 @@
+---
+import { path, t, type Lang } from '../i18n';
+import Icon from '../components/Icon.astro';
+import Waitlist from '../components/Waitlist.astro';
+import Steps from '../components/Steps.astro';
+import FaqList from '../components/FaqList.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const h = d.home;
+---
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" data-reveal>{h.hero.eyebrow}</p>
+    <h1 class="hero-title"><span data-split>{h.hero.l1}</span> <span data-split class="accent">{h.hero.l2}</span></h1>
+    <p class="lead" data-reveal>{h.hero.lead}</p>
+    <div data-reveal class="hero-form"><Waitlist lang={lang} source="hero" /></div>
+    <p class="hero-launch" data-reveal><span class="dot"></span>{h.hero.launch}</p>
+    <ul class="chips" data-reveal aria-label={h.hero.popular}>
+      <li class="muted">{h.hero.popular}</li>
+      {h.hero.chips.map((c) => <li><a href={path('services', lang)}>{c}</a></li>)}
+    </ul>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span>{d.common.scroll}</span><i></i></div>
+</section>
+
+<section class="trust" aria-label="Qapinda">
+  <ul>{h.trust.map((x) => <li data-reveal>{x}</li>)}</ul>
+</section>
+
+<section class="section" id="categories">
+  <header class="sec-head">
+    <h2 data-split>{h.catTitle}</h2>
+    <p class="lead" data-reveal>{h.catLead}</p>
+  </header>
+  <ul class="cat-grid" data-stagger>
+    {d.categories.items.slice(0, 8).map((c) => (
+      <li><a class="cat-card" href={path('services', lang)} data-tilt>
+        <Icon k={c.k} /><h3>{c.n}</h3><p>{c.d}</p><span class="arrow" aria-hidden="true">→</span>
+      </a></li>
+    ))}
+  </ul>
+  <p class="center" data-reveal><a class="btn btn-ghost" href={path('services', lang)} data-magnetic>{h.catCta}</a></p>
+</section>
+
+<section class="section story" data-story>
+  <p class="eyebrow">{h.story.kicker}</p>
+  <h2 class="story-title" data-split>{h.story.title}</h2>
+  <p class="story-text lead" data-reveal>{h.story.text}</p>
+</section>
+
+<section class="section" id="how">
+  <header class="sec-head">
+    <p class="eyebrow" data-reveal>{d.steps.kicker}</p>
+    <h2 data-split>{d.steps.title}</h2>
+  </header>
+  <Steps lang={lang} />
+  <p class="center" data-reveal><a class="btn" href={path('how', lang)} data-magnetic>{d.common.learnMore}</a></p>
+</section>
+
+<section class="section">
+  <header class="sec-head">
+    <h2 data-split>{h.proTitle}</h2>
+    <p class="lead" data-reveal>{h.proLead}</p>
+  </header>
+  <ul class="pro-grid" data-stagger>
+    {d.samplePros.map((p) => (
+      <li class="pro-card" data-tilt>
+        <div class="pro-top"><span class="avatar">{p.i}</span><div><h3>{p.n}</h3><p class="muted">{p.c} · ★ {p.r}</p></div></div>
+        <p>{p.d}</p>
+        <p class="pro-meta">{p.m}</p>
+        <span class="badge">{d.common.sample}</span>
+      </li>
+    ))}
+  </ul>
+  <p class="center" data-reveal><a class="btn btn-ghost" href={path('reviews', lang)} data-magnetic>{h.proCta}</a></p>
+</section>
+
+<section class="section band">
+  <div class="band-inner">
+    <p class="eyebrow" data-reveal>{h.forPros.kicker}</p>
+    <h2 data-split>{h.forPros.title}</h2>
+    <p class="lead" data-reveal>{h.forPros.text}</p>
+    <a class="btn btn-accent" href={path('pros', lang)} data-reveal data-magnetic>{h.forPros.cta}</a>
+  </div>
+</section>
+
+<section class="section narrow">
+  <header class="sec-head"><h2 data-split>{h.faqTitle}</h2></header>
+  <FaqList lang={lang} limit={4} />
+  <p class="center" data-reveal><a class="btn btn-ghost" href={path('faq', lang)} data-magnetic>{h.faqCta}</a></p>
+</section>

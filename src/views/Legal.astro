@@ -1,0 +1,24 @@
+---
+import { t, type Lang, type PageKey } from '../i18n';
+interface Props { lang: Lang; pageKey: PageKey }
+const { lang, pageKey } = Astro.props;
+const d = t(lang);
+const doc = pageKey === 'terms' ? d.legal.terms : d.legal.privacy;
+const slug = (i: number) => `s${i + 1}`;
+---
+<section class="page-hero legal-hero">
+  <p class="eyebrow" data-reveal>{d.legal.updated}</p>
+  <h1 data-split>{doc.title}</h1>
+</section>
+<section class="section legal">
+  <aside class="toc" aria-label={d.legal.toc}>
+    <p class="eyebrow">{d.legal.toc}</p>
+    <ol>{doc.sections.map((s, i) => <li><a href={`#${slug(i)}`}>{s.h}</a></li>)}</ol>
+  </aside>
+  <article class="legal-body">
+    <p class="notice">{d.legal.placeholderNote}</p>
+    {doc.sections.map((s, i) => (
+      <section id={slug(i)} data-reveal><h2 class="h3">{s.h}</h2>{s.p.map((p) => <p>{p}</p>)}</section>
+    ))}
+  </article>
+</section>
